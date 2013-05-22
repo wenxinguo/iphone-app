@@ -42,6 +42,9 @@
     self.twitterView = [[TwitterView alloc] init];
     [self addChildViewController:self.twitterView];
     [self.view addSubview:self.twitterView.view];
+    self.twitterView.view.frame = self.view.bounds;
+    self.twitterView.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
     //添加发布动弹的按钮
     UIBarButtonItem *btnPubTweet = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:nil];
     btnPubTweet.image = [UIImage imageNamed:@"tweet24"];

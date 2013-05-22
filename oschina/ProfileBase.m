@@ -51,6 +51,12 @@
     [self addChildViewController:self.msgView];
     [self.view addSubview:self.activesView.view];
     [self.view addSubview:self.msgView.view];
+    
+    self.activesView.view.frame = self.view.bounds;
+    self.activesView.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    self.msgView.view.frame = self.view.bounds;
+    self.msgView.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
 - (void)viewDidLoad
 {
