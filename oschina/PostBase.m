@@ -44,6 +44,8 @@
     self.postsView.catalog = 1;
     [self addChildViewController:self.postsView];
     [self.view addSubview:self.postsView.view];
+    self.postsView.view.frame = self.view.bounds;
+    self.postsView.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     //添加发布动弹的按钮
     UIBarButtonItem *btnPubPost = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:nil];

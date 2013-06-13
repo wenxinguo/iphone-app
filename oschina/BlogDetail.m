@@ -27,7 +27,9 @@
     self.webView.delegate = self;
     [self.webView loadHTMLString:@"" baseURL:nil];
     
-    self.webView.frame = CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height - 44 - 20);
+    //self.webView.frame = CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height - 44 - 20);
+    self.webView.frame = self.view.bounds;
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     //如果有网络
     if ([Config Instance].isNetworkRunning) {

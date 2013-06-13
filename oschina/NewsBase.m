@@ -44,6 +44,8 @@
     self.newsView.catalog = 1;
     [self addChildViewController:self.newsView];
     [self.view addSubview:self.newsView.view];
+    self.newsView.view.frame = self.view.bounds;
+    self.newsView.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     //添加发布动弹的按钮
     UIBarButtonItem *btnSearch = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:self action:nil];
